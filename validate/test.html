@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>demo</title>
+		<meta name="author" content="peng" />
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.min.js"></script>
+		<script src="./js/validate.js"></script>
+		<script src="./js/test.js"></script>
+	</head>
+	<body>
+		<a></a>
+		<script>
+		    $(document).ready(function(){
+		    	var m;
+		    	alert(m);
+		    	alert(m==undefined);
+		    });
+			document.writeln("422053362@qq.com应该为true====" + validateEmail("422053362@qq.com"));
+			document.writeln("<br/>");
+			document.writeln("422053362qq.com应该为false====" + validateEmail("422053362qq.com"));
+			document.writeln("<br/>");
+			document.writeln("422053362@qq应该为false====" + validateEmail("422053362@qq"));
+			document.writeln("<br/>");
+			document.writeln("1应该为true====" + validateNum("1", options.rules.name3));
+			document.writeln("<br/>");
+			document.writeln("5应该为true====" + validateNum("5", options.rules.name3));
+			document.writeln("<br/>");
+			document.writeln("100应该为true====" + validateNum("100", options.rules.name3));
+			document.writeln("<br/>");
+			document.writeln("a应该为false====" + validateNum("a", options.rules.name3));
+			document.writeln("<br/>");
+			document.writeln("0应该为false====" + validateNum("0", options.rules.name3));
+			document.writeln("<br/>");
+			document.writeln("101应该为false====" + validateNum("101", options.rules.name3));
+
+			document.writeln("<br/>");
+			document.writeln("1234应该为true====" + validateString("12345", options.rules.name1));
+			document.writeln("<br/>");
+			document.writeln("12345应该为true====" + validateString("12345", options.rules.name1));
+			document.writeln("<br/>");
+			document.writeln("123456应该为true====" + validateString("123456", options.rules.name1));
+			document.writeln("<br/>");
+			document.writeln("12345678应该为true====" + validateString("12345678", options.rules.name1));
+			document.writeln("<br/>");
+			document.writeln("123456789应该为false====" + validateString("123456789", options.rules.name1));
+
+		</script>
+	</body>
+</html>
